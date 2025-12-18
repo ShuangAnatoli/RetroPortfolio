@@ -26,7 +26,7 @@ export const DocumentIcon: React.FC<{ className?: string }> = ({ className }) =>
   <svg viewBox="0 0 24 24" fill="currentColor" className={className} xmlns="http://www.w3.org/2000/svg">
     <path d="M4 2H14L20 8V22H4V2Z" />
     <path d="M14 2V8H20" fill="rgba(0,0,0,0.2)"/>
-    <rect x="7" y="10" width="10" height="2" fill="var(--color-retro-lightest, #9bbc0f)" />
+    <rect x="7" y="10" width="30" height="5" fill="var(--color-retro-lightest, #9bbc0f)" />
     <rect x="7" y="14" width="10" height="2" fill="var(--color-retro-lightest, #9bbc0f)" />
     <rect x="7" y="18" width="8" height="2" fill="var(--color-retro-lightest, #9bbc0f)" />
   </svg>

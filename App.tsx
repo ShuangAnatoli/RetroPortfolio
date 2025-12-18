@@ -54,27 +54,30 @@ const App: React.FC = () => {
     <div className="space-y-4">
       <div className="flex items-start gap-4">
         <div className="w-24 h-24 bg-retro-dark border-2 border-retro-darkest shrink-0 overflow-hidden relative">
-             <img src="https://picsum.photos/200/200" alt="Avatar" className="object-cover w-full h-full grayscale contrast-125 sepia hover:scale-110 transition-transform" />
+             <img src="/mylogo.png" alt="Avatar" className="object-cover w-full h-full grayscale contrast-125 sepia hover:scale-110 transition-transform" />
              <div className="absolute inset-0 bg-retro-lightest/20 pointer-events-none mix-blend-overlay"></div>
         </div>
         <div>
           <h2 className="text-xl font-bold mb-2 uppercase">Developer Profile</h2>
           <p className="text-lg leading-tight">
-            Level 25 Full-Stack Engineer. <br/>
-            Specialized in React, TypeScript, and destroying bugs.
+            Software Engineer with ML Research Background
           </p>
         </div>
       </div>
+      {/* CHANGE THE SKILLS HERE HONEY <3 */}
       <div className="border-t-2 border-retro-darkest border-dashed my-2"></div>
       <div>
         <h3 className="text-lg font-bold mb-1">[ SKILLS ]</h3>
         <ul className="grid grid-cols-2 gap-x-2 gap-y-1">
-          <li>* JavaScript (ES6+)</li>
+          <li>* Python</li>
+          <li>* Pytorch</li>
+          <li>* C#</li>
+          <li>* SQL/NoSQL</li>
           <li>* React / Next.js</li>
           <li>* Node.js</li>
           <li>* Tailwind CSS</li>
           <li>* Database Architect</li>
-          <li>* Pixel Art Design</li>
+          <li>* Machine Learning</li>
         </ul>
       </div>
     </div>
@@ -84,7 +87,9 @@ const App: React.FC = () => {
     <div className="space-y-6">
       <p className="mb-4 text-center">--- C:\PROJECTS ---</p>
       {PROJECTS.map((project, idx) => (
+        
         <div key={idx} className="border-2 border-retro-dark p-2 hover:bg-retro-light/20 transition-colors cursor-pointer group">
+          <a href={project.link} target="_blank">
           <h3 className="font-bold text-lg group-hover:underline">{project.title}</h3>
           <p className="mb-2">{project.description}</p>
           <div className="flex flex-wrap gap-2">
@@ -92,6 +97,7 @@ const App: React.FC = () => {
               <span key={i} className="bg-retro-dark text-retro-lightest px-1 text-sm">{t}</span>
             ))}
           </div>
+          </a>
         </div>
       ))}
     </div>
@@ -99,12 +105,12 @@ const App: React.FC = () => {
 
   const renderResume = () => (
     <div className="space-y-4">
-      <div className="text-center border-b-2 border-retro-darkest border-dashed pb-2">
+      {/* <div className="text-center border-b-2 border-retro-darkest border-dashed pb-2">
          <h2 className="text-xl font-bold">JANE DOE</h2>
          <p>Senior Frontend Engineer</p>
-      </div>
-      
-      <div className="space-y-2">
+      </div> */}
+      {/* CHANGE EXPERIENCE HERE */}
+      {/* <div className="space-y-2">
         <h3 className="bg-retro-dark text-retro-lightest px-1 inline-block">EXPERIENCE</h3>
         <div>
            <p className="font-bold flex justify-between"><span>Tech Corp.</span> <span>2021-Present</span></p>
@@ -122,12 +128,13 @@ const App: React.FC = () => {
            <p className="font-bold">Computer Science, BS</p>
            <p className="text-sm">University of Technology, 2018</p>
         </div>
-      </div>
+      </div> */}
       
       <div className="text-center pt-4">
-         <button className="border-2 border-retro-darkest px-4 py-1 hover:bg-retro-darkest hover:text-retro-lightest transition-colors">
+        <a href="https://drive.google.com/file/d/1FpHHrKqRWAkByQoIkw7nqXqP26NG-syh/view?usp=sharing"><button className="border-2 border-retro-darkest px-4 py-1 hover:bg-retro-darkest hover:text-retro-lightest transition-colors">
             DOWNLOAD_PDF
-         </button>
+         </button></a>
+         
       </div>
     </div>
   );
@@ -150,7 +157,7 @@ const App: React.FC = () => {
         ))}
         <div className="text-center mt-8">
             <p>EMAIL_ME:</p>
-            <a href="mailto:hello@example.com" className="underline hover:bg-retro-darkest hover:text-retro-lightest">hello@example.com</a>
+            <a href="mailto:swannsu@gmail.com" className="underline hover:bg-retro-darkest hover:text-retro-lightest">swannsu@gmail.com</a>
         </div>
       </div>
     </div>
@@ -177,14 +184,11 @@ const App: React.FC = () => {
   return (
     <div className="w-screen h-screen bg-[#e0e0d0] flex items-center justify-center p-2 sm:p-8 select-none">
       
-      {/* Device Casing (The Monitor) 
-          CHANGED: Increased mobile height to 800px to ensure space for all icons
-      */}
       <div className="relative w-full max-w-5xl h-[800px] sm:h-auto sm:aspect-[4/3] bg-[#d0d0c0] rounded-xl shadow-[inset_-5px_-5px_10px_rgba(0,0,0,0.1),_10px_10px_20px_rgba(0,0,0,0.3)] p-3 sm:p-8 flex flex-col border border-[#b0b0a0]">
         
         {/* Decor: Brand Name */}
         <div className="absolute top-3 left-8 text-[#808070] font-bold font-sans tracking-widest text-sm sm:text-base hidden sm:block">
-          NINTENDO GS
+          Beep Boop
         </div>
 
         {/* Decor: Power LED */}
@@ -206,7 +210,7 @@ const App: React.FC = () => {
                 
                 {/* Top Bar */}
                 <div className="flex justify-between items-end border-b-2 border-retro-darkest pb-1 mb-4 shrink-0">
-                  <div className="bg-retro-darkest text-retro-lightest px-2">DEV_OS</div>
+                  <div className="bg-retro-darkest text-retro-lightest px-2">BeepBoop_OS</div>
                   <div className="flex gap-4">
                      <span className="animate-pulse">BATTERY OK</span>
                      <span>{currentTime}</span>
@@ -220,30 +224,32 @@ const App: React.FC = () => {
                 <div className="flex flex-wrap content-start justify-center sm:justify-start gap-4 sm:gap-8 overflow-y-auto h-full pb-20">
                   <DesktopItem 
                     label="ABOUT" 
-                    iconType="folder" 
+                    customIconSrc="/folder.png" 
                     onClick={() => toggleWindow('about', true)} 
                   />
                   <DesktopItem 
                     label="PROJECTS" 
-                    iconType="folder" 
+                    customIconSrc="/folder.png" 
                     onClick={() => toggleWindow('projects', true)} 
+                  />
+                  <DesktopItem 
+                    label="CONTACT" 
+                    customIconSrc="/folder.png" 
+                    onClick={() => toggleWindow('contact', true)} 
                   />
                   {/* CHANGED: Now using customIconSrc. Make sure to put 'resume-icon.png' in /public */}
                   <DesktopItem 
                     label="RESUME" 
-                    customIconSrc="/resume-icon.png"
+                    customIconSrc="/pdf.png"
                     onClick={() => toggleWindow('resume', true)} 
+                    // iconClassName="w-24 h-24"
                   />
-                  <DesktopItem 
-                    label="CONTACT" 
-                    iconType="folder" 
-                    onClick={() => toggleWindow('contact', true)} 
-                  />
-                  <DesktopItem 
-                    label="TRASH" 
-                    iconType="trash" 
+                  
+                  {/* <DesktopItem 
+                    label="GITHUB" 
+                    customIconSrc="/github.png" 
                     onClick={() => toggleWindow('trash', true)} 
-                  />
+                  /> */}
                 </div>
 
                 {/* Floating Intro Text */}
@@ -265,13 +271,6 @@ const App: React.FC = () => {
                     {w.type === WindowType.PROJECTS && renderProjects()}
                     {w.type === WindowType.RESUME && renderResume()}
                     {w.type === WindowType.CONTACT && renderContact()}
-                    {w.type === WindowType.TRASH && (
-                      <div className="text-center p-8">
-                        <p className="mb-4 text-4xl">?</p>
-                        <p>Access Denied.</p>
-                        <p>The trash is empty.</p>
-                      </div>
-                    )}
                   </Window>
                 ))}
 
@@ -281,8 +280,8 @@ const App: React.FC = () => {
 
         {/* Bottom Logo Area */}
         <div className="mt-2 text-[#808070] italic font-serif text-right px-4 text-xs sm:text-sm flex justify-between items-center w-full">
-            <span className="not-italic font-sans text-gray-400">PHONES <span className="inline-block w-2 h-2 bg-gray-400 rounded-full ml-1"></span></span>
-            <span>Dot Matrix With Stereo Sound</span>
+            <span className="not-italic font-sans text-gray-400">Beep Boop Machine <span className="inline-block w-2 h-2 bg-gray-400 rounded-full ml-1"></span></span>
+            <span>𓇼 ⋆｡˚ 𓆝⋆｡˚ 𓇼</span>
         </div>
 
       </div>

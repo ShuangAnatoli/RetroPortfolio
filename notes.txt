@@ -1,0 +1,3 @@
+remove trash
+change color
+change texts and lore
